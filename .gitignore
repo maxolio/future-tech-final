@@ -1,0 +1,14 @@
+node_modules/
+.idea/
+dist/
+.DS_Store
+*.log
+# Твои заметки
+MD_CSS.md
+MD_HTML.md
+
+# Файл с субтитрами (используем звездочку, если имя длинное или есть пробелы)
+Субтитры*
+
+styles/main.css
+styles/main.css.map
