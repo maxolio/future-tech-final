@@ -1,0 +1,30 @@
+@use "helpers" as *;
+
+.container {
+  max-width: calc(var(--container-width) - var(--container-padding-x) * 2);
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.visible-mobile {
+  @include mobile-above {
+    display: none !important;
+  }
+}
+
+/*
+Как это происходит технически:
+.visually-hidden: Не использует display: none. Вместо этого элемент «схлопывается» в невидимую точку размером 1x1 пиксель и выносится за пределы экрана (position: absolute, clip-path: inset(100%)). Браузер считает, что элемент есть, и зачитывает его текст роботам, но глаз человека его не видит.
+.hidden-mobile: Использует Media Query (например, @media (max-width: 767px)). Когда ширина экрана становится меньше указанной, срабатывает display: none !important, и браузер полностью вырезает элемент из отрисовки.
+.visible-mobile: Использует противоположный Media Query (например, @media (min-width: 768px)). Как только экран расширяется до планшета или ПК, элемент получает display: none !important и исчезает.
+                                                                                                                                                                                                                                                                                                                                                               Важно: В последних двух случаях используется !important, чтобы гарантированно перебить любые другие стили элемента и заставить его исчезнуть.*/

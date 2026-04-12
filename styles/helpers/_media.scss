@@ -1,0 +1,71 @@
+@use "functions" as *;
+
+$laptop: 1440.98;
+$tablet: 1023.98;
+$mobile: 767.98;
+$mobile-s: 480.98;
+
+@mixin laptop-above { // от 1440 и больше
+  @media (width > rem($laptop)) {
+    @content;
+  }
+}
+
+@mixin laptop { // от 1440 и меньше
+  @content;
+  @media (width <= rem($laptop)) {
+  }
+}
+
+@mixin tablet-above { // от 1023 и больше
+  @media (width > rem($tablet)) {
+    @content;
+  }
+}
+
+@mixin tablet { // от 1023 и меньше
+  @media (width <= rem($tablet)) {
+    @content;
+  }
+}
+
+@mixin mobile-above { // от 767 и больше
+  @media (width > rem($mobile)) {
+    @content;
+  }
+}
+
+@mixin mobile { // от 767 и меньше
+  @media (width <= rem($mobile)) {
+    @content;
+  }
+}
+
+@mixin mobile-s-above { // от 480 и больше
+  @media (width > rem($mobile-s)) {
+    @content;
+  }
+}
+
+@mixin mobile-s { // от 480 и меньше
+  @media (width <= rem($mobile-s)) {
+    @content;
+  }
+}
+
+@mixin hover($hasActiveEffectOnMobile: true) {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+  //Добавление параметра $hasActiveEffectOnMobile в миксин @include hover позволяет гибко отключать визуальный отклик на нажатие (псевдокласс :active) для сенсорных экранов, когда этот эффект нежелателен (например, чтобы элементы не "моргали" при скролле).
+  @if ($hasActiveEffectOnMobile) {
+    @media (any-hover: none) {
+      &:active {
+        @content;
+      }
+    }
+  }
+}
+
