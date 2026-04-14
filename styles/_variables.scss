@@ -1,6 +1,8 @@
 @use "helpers" as *;
 
 :root {
+  --promo-height: 0px;
+
   --color-light: #f1e9e9;
   --color-dark: #141414;
   --color-dark-10: #1A1A1A;
@@ -18,6 +20,9 @@
 
   --container-width: #{rem(1600)};
   --container-padding-x: #{rem(15)};
+
+  --border: #{rem(1)} solid var(--color-dark-15);
+
 
   @include laptop {
     --container-width: #{rem(1280)};
