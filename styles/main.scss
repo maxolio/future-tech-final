@@ -12,6 +12,18 @@
 @use "home-page/header/burger-button";
 @use "home-page/header/header";
 
+@use "home-page/footer/badge";
+@use "home-page/footer/socilas";
+@use "home-page/footer/footer";
+
+//.header {
+//  display: none !important;
+//}
+
+
+
+
+
 /*
 Пример => сначала загружается кнопка с общим падингом 10px, потом ее перебивает модификация падинга из Header 5px !!
 

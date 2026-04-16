@@ -1,9 +1,6 @@
 const rootSelector = '[data-js-element-observer]'
 
 class ElementObserver {
-  selector = {
-    root: rootSelector,
-  }
 
   cssVar = {
     cssVarName: (element) => `--${element.dataset.jsElementObserver}-height`,
