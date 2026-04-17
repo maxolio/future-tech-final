@@ -4,11 +4,16 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    @include tablet {
+
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: flex-end;
     row-gap: fluid(10, 0);
     padding: rem(50);
 

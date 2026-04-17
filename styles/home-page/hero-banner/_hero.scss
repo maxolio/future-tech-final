@@ -83,7 +83,7 @@
     padding-left: rem(80);
     padding-bottom: rem(80);
     border-left: var(--border);
-    background: url("/images/hero-banner/abstract-image.png") 0 0/cover no-repeat;
+    background: url("../images/hero-banner/abstract-image.png") 0 0/cover no-repeat;
 
     @include laptop {
       padding-left: rem(50);
@@ -95,7 +95,7 @@
       margin-left: calc(var(--container-padding-x) * -1);
       padding: rem(100) rem(40) rem(40);
       border-left: none;
-      background-image: url("/images/hero-banner/abstract-image-mobile.png");
+      background-image: url("../images/hero-banner/abstract-image-mobile.png");
       background-size: contain;
     }
   }
