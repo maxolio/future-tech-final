@@ -16,11 +16,17 @@
 @use "home-page/footer/socilas";
 @use "home-page/footer/footer";
 
-//.header {
+@use "home-page/hero-banner/metrics";
+@use "home-page/hero-banner/team";
+@use "home-page/hero-banner/resources-preview";
+@use "home-page/hero-banner/advantage-card";
+@use "home-page/hero-banner/hero";
+
+
+//.header,
+//footer {
 //  display: none !important;
 //}
-
-
 
 
 
