@@ -944,7 +944,7 @@ button[aria-label]::before {
   translate: 0 -50%;
   content: "";
   right: 0;
-  background: url("/images/hero-banner/Icon-arrow-dark.svg") center no-repeat var(--color-accent);
+  background: url("../images/hero-banner/Icon-arrow-dark.svg") center no-repeat var(--color-accent);
   border-radius: 50%;
 }
 .advantage-card__details {
@@ -1026,7 +1026,7 @@ button[aria-label]::before {
   padding-left: 5rem;
   padding-bottom: 5rem;
   border-left: var(--border);
-  background: url("/images/hero-banner/abstract-image.png") 0 0/cover no-repeat;
+  background: url("../images/hero-banner/abstract-image.png") 0 0/cover no-repeat;
 }
 @media (width <= 90.06125rem) {
   .hero__resources-preview {
@@ -1040,7 +1040,7 @@ button[aria-label]::before {
     margin-left: calc(var(--container-padding-x) * -1);
     padding: 6.25rem 2.5rem 2.5rem;
     border-left: none;
-    background-image: url("/images/hero-banner/abstract-image-mobile.png");
+    background-image: url("../images/hero-banner/abstract-image-mobile.png");
     background-size: contain;
   }
 }
@@ -1080,19 +1080,5 @@ button[aria-label]::before {
     border-bottom: var(--border);
   }
 }
-
-/*
-Пример => сначала загружается кнопка с общим падингом 10px, потом ее перебивает модификация падинга из Header 5px !!
-
-Порядок файлов в Sass/SCSS подчиняется главному правилу CSS: «То, что ниже, перебивает то, что выше» (принцип каскада).
-Поэтому порядок подключения (от меньшего к большему) выглядит так:
-Сначала независимые «атомы» (icon, logo, button, burger-button): Это мелкие кирпичики. Они должны загрузиться первыми, чтобы у них были базовые стили.
-Затем «молекула» / контейнер (header): Это большая коробка, в которой лежат эти атомы.
-Зачем именно такой порядок (Пример):
-Представь, что у всех кнопок на сайте отступ padding: 10px (задано в button.scss).
-Но именно в хедере тебе нужно, чтобы кнопка была меньше: padding: 5px.
-Если header.scss будет загружен в самом конце, его стили сработают последними и успешно изменят отступ кнопки внутри себя.
-Если бы ты загрузил header.scss в начале, базовые стили из button.scss загрузились бы позже и перебили бы твои правки для хедера.
-*/
 
 /*# sourceMappingURL=main.css.map */
