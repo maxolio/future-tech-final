@@ -852,6 +852,7 @@ button[aria-label]::before {
   --personImageSize: 3.75rem;
   display: flex;
   padding: 0.625rem;
+  border: var(--border);
   background-color: var(--color-dark-10);
   border-radius: 6.25rem;
 }
