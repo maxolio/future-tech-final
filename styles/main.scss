@@ -23,17 +23,23 @@
 @use "home-page/hero-banner/hero";
 
 @use "home-page/futures/tag";
+@use "home-page/futures/section";
 @use "home-page/futures/tile";
 @use "home-page/futures/list";
 @use "home-page/futures/card";
-@use "home-page/futures/section";
+
+@use "home-page/tabs-blog/tabs";
+@use "home-page/tabs-blog/person-card";
+@use "home-page/tabs-blog/blog-actions";
+@use "home-page/tabs-blog/blog-card";
 
 
-//.header,
-//main > *:not(:last-child),
-//footer {
-//  display: none !important;
-//}
+
+.header,
+main > *:not(:last-child),
+footer {
+  display: none !important;
+}
 //"Выбери ВСЕ элементы (*), которые лежат ПРЯМО ВНУТРИ (>) тега <main>, ЗА ИСКЛЮЧЕНИЕМ (:not) САМОГО ПОСЛЕДНЕГО из них (:last-child)."
 
 
