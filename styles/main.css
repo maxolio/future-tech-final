@@ -1285,6 +1285,9 @@ button[aria-label]::before {
     grid-area: el-6;
   }
 }
+.card__grid--2-cols-alt .card__cell-link {
+  align-self: center;
+}
 .card__cell {
   display: flex;
   flex-direction: column;
