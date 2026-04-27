@@ -11,7 +11,7 @@
     padding: rem(80);
 
     @include laptop {
-      padding: rem(60);
+      padding: rem(50);
     }
   }
 
@@ -44,7 +44,12 @@
     &-info {
       display: grid;
       row-gap: fluid(16, 6);
+    }
 
+    &-link {
+      @include tablet {
+        justify-self: start;
+      }
     }
   }
 
@@ -69,6 +74,72 @@
     @include mobile {
       grid-template-columns: 1fr;
     }
+
+    &--2-cols-alt {
+      align-items: center;
+      gap: rem(20);
+
+      @include laptop {
+        gap: rem(16);
+      }
+
+      @include tablet-above {
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+          'el-1 el-2'
+          'el-3 el-3'
+          'el-4 el-5'
+          'el-6 el-6';
+      }
+
+
+      .card__cell {
+        row-gap: rem(4);
+
+        &-image {
+          border-radius: rem(10);
+        }
+
+        &--el-1 {
+          @include tablet-above {
+            grid-area: el-1;
+          }
+        }
+
+        &--el-2 {
+          @include tablet-above {
+            grid-area: el-2;
+          }
+        }
+
+        &--el-3 {
+          @include tablet-above {
+            grid-area: el-3;
+          }
+        }
+
+        &--el-4 {
+          @include tablet-above {
+            grid-area: el-4;
+          }
+        }
+
+        &--el-5 {
+          flex-direction: row;
+          justify-content: space-between;
+
+          @include tablet-above {
+            grid-area: el-5;
+          }
+        }
+
+        &--el-6 {
+          @include tablet-above {
+            grid-area: el-6;
+          }
+        }
+      }
+    }
   }
 
   &__cell {
@@ -76,5 +147,7 @@
     flex-direction: column;
     justify-content: start;
     row-gap: fluid(20, 4);
+
+
   }
 }

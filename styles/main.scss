@@ -33,13 +33,17 @@
 @use "home-page/tabs-blog/blog-actions";
 @use "home-page/tabs-blog/blog-card";
 
+@use "home-page/download-block/download-info";
 
 
-//.header,
-//main > *:not(:last-child),
-//footer {
-//  display: none !important;
-//}
+
+
+
+.header,
+main > *:not(:last-child),
+footer {
+  display: none !important;
+}
 //"Выбери ВСЕ элементы (*), которые лежат ПРЯМО ВНУТРИ (>) тега <main>, ЗА ИСКЛЮЧЕНИЕМ (:not) САМОГО ПОСЛЕДНЕГО из них (:last-child)."
 
 

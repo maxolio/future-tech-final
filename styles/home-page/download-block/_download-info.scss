@@ -1,0 +1,40 @@
+@use "../../helpers" as *;
+
+.download-info {
+  max-width: rem(443);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: rem(50);
+  text-wrap: nowrap;
+
+  @include laptop {
+    column-gap: rem(30);
+  }
+
+  &__body {
+    display: grid;
+    justify-content: start;
+    row-gap: rem(4);
+
+    @include laptop{
+      row-gap: rem(2);
+    }
+  }
+
+  &__team {
+    border-radius: rem(12);
+    border: none;
+    background-color: var(--color-dark);
+
+    .team__person {
+      width: rem(50);
+
+      @include laptop {
+        width: rem(40);
+      }
+    }
+  }
+
+
+}
