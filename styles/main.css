@@ -466,10 +466,10 @@ button[aria-label]::before {
   }
 }
 .icon--yellow-arrow::after {
-  background-image: url("./icons/header/Icon-yelllow-arrow.svg");
+  background-image: url("../icons/header/Icon-yelllow-arrow.svg");
 }
 .icon--yellow-eye::after {
-  background-image: url("./images/download-block/Icon-eye.svg");
+  background-image: url("../images/download-block/Icon-eye.svg");
 }
 
 /*
@@ -1131,7 +1131,7 @@ button[aria-label]::before {
 @media (width <= 47.99875rem) {
   .section__header-link {
     align-self: start;
-    width: 21.875rem;
+    width: 21.25rem;
   }
 }
 .section__subtitle {
@@ -1500,12 +1500,6 @@ button[aria-label]::before {
   .download-info__team .team__person {
     width: 2.5rem;
   }
-}
-
-.header,
-main > *:not(:last-child),
-footer {
-  display: none !important;
 }
 
 /*# sourceMappingURL=main.css.map */
