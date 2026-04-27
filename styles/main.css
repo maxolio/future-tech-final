@@ -1131,7 +1131,7 @@ button[aria-label]::before {
 @media (width <= 47.99875rem) {
   .section__header-link {
     align-self: start;
-    width: 21.25rem;
+    width: 18.75rem;
   }
 }
 .section__subtitle {
