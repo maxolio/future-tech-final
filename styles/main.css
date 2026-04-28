@@ -1613,10 +1613,4 @@ button[aria-label]::before {
   translate: -50% -50%;
 }
 
-.header,
-main > *:not(:last-child),
-footer {
-  display: none !important;
-}
-
 /*# sourceMappingURL=main.css.map */
