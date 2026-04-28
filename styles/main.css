@@ -1094,7 +1094,7 @@ button[aria-label]::before {
   font-weight: 500;
   color: var(--color-light);
   border-radius: 0.25rem;
-  background-color: var(--color-dark-20);
+  background-color: var(--color-dark-10);
 }
 @media (width <= 90.06125rem) {
   .tag {
@@ -1104,7 +1104,7 @@ button[aria-label]::before {
 
 .section__header {
   padding-block: clamp(2.5rem, 1.2254901961rem + 5.2287581699vw, 7.5rem);
-  background-color: var(--color-dark-10);
+  background-color: var(--color-dark-20);
 }
 .section__header-inner:has(.section__header-link) {
   display: flex;
@@ -1115,6 +1115,7 @@ button[aria-label]::before {
 @media (width <= 47.99875rem) {
   .section__header-inner:has(.section__header-link) {
     flex-direction: column;
+    align-items: start;
     row-gap: 1.875rem;
   }
 }
