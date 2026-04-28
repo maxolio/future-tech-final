@@ -43,11 +43,11 @@
 
 
 
-.header,
-main > *:not(:last-child),
-footer {
-  display: none !important;
-}
+//.header,
+//main > *:not(:last-child),
+//footer {
+//  display: none !important;
+//}
 
 //"Выбери ВСЕ элементы (*), которые лежат ПРЯМО ВНУТРИ (>) тега <main>, ЗА ИСКЛЮЧЕНИЕМ (:not) САМОГО ПОСЛЕДНЕГО из них (:last-child)."
 
