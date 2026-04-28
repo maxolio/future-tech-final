@@ -1511,11 +1511,7 @@ button[aria-label]::before {
   --columns: 1;
   --itemPaddingY: clamp(2.5rem, 1.862745098rem + 2.614379085vw, 5rem);
   display: grid;
-}
-@media (width > 63.99875rem) {
-  .bordered-grid {
-    grid-template-columns: repeat(var(--columns), 1fr);
-  }
+  grid-template-columns: repeat(var(--columns), 1fr);
 }
 .bordered-grid--2-cols {
   --columns: 2;
@@ -1527,6 +1523,11 @@ button[aria-label]::before {
 @media (width <= 90.06125rem) {
   .bordered-grid--3-cols {
     --itemPaddingX: 2.5rem;
+  }
+}
+@media (width <= 63.99875rem) {
+  .bordered-grid--3-cols {
+    --columns: 1;
   }
 }
 .bordered-grid--3-cols .bordered-grid__item {
@@ -1587,6 +1588,8 @@ button[aria-label]::before {
   flex-direction: column;
   align-items: center;
   row-gap: 2.5rem;
+  max-width: 31.25rem;
+  margin-inline: auto;
 }
 @media (width <= 90.06125rem) {
   .reviews-card {
@@ -1612,6 +1615,145 @@ button[aria-label]::before {
   top: 0;
   left: 50%;
   translate: -50% -50%;
+}
+
+.about-card {
+  --iconWidth: 3.25rem;
+  --paddingRight: 1.25rem;
+  --iconErrowWidth: 1.5rem;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  row-gap: clamp(0.625rem, 0.4656862745rem + 0.6535947712vw, 1.25rem);
+}
+@media (width <= 90.06125rem) {
+  .about-card {
+    --iconWidth: 2.5rem;
+    --paddingRight: 1rem;
+    --iconErrowWidth: 1.25rem;
+  }
+}
+.about-card__title {
+  font-size: clamp(1rem, 0.9044117647rem + 0.3921568627vw, 1.375rem);
+  position: relative;
+  justify-content: space-between;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  padding-right: calc(var(--iconWidth) + var(--paddingRight));
+}
+.about-card__title::after {
+  width: var(--iconWidth);
+  height: var(--iconWidth);
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  left: calc(100% - var(--iconWidth));
+  content: "";
+  background: url("../images/about/Icon-arrow.svg") center/var(--iconErrowWidth) no-repeat var(--color-accent);
+  border-radius: 50%;
+}
+
+.about {
+  padding-block: clamp(2.5rem, 1.2254901961rem + 5.2287581699vw, 7.5rem);
+  background-color: var(--color-dark-20);
+}
+.about__inner {
+  display: grid;
+  row-gap: clamp(2.5rem, 1.5441176471rem + 3.9215686275vw, 6.25rem);
+}
+.about__header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: clamp(1.25rem, 0.2941176471rem + 3.9215686275vw, 5rem);
+  row-gap: 1.875rem;
+}
+@media (width <= 90.06125rem) {
+  .about__header {
+    row-gap: 1.25rem;
+  }
+}
+@media (width > 47.99875rem) {
+  .about__header {
+    grid-template-areas: "icon info" "icon description";
+  }
+}
+@media (width <= 47.99875rem) {
+  .about__header {
+    grid-template-areas: "icon subtitle" "title title" "description description";
+  }
+}
+.about__icon {
+  grid-area: icon;
+}
+@media (width <= 90.06125rem) {
+  .about__icon {
+    width: 7.5rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .about__icon {
+    width: 3.75rem;
+  }
+}
+@media (width > 47.99875rem) {
+  .about__info {
+    grid-area: info;
+    display: grid;
+    row-gap: 1rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .about__info {
+    display: contents;
+    row-gap: 0.625rem;
+  }
+}
+.about__subtitle {
+  font-size: clamp(0.875rem, 0.7794117647rem + 0.3921568627vw, 1.25rem);
+  justify-self: start;
+  padding: 0.375rem 0.625rem;
+  font-weight: 500;
+  color: var(--color-light);
+  border-radius: 0.25rem;
+  background-color: var(--color-dark-10);
+}
+@media (width <= 90.06125rem) {
+  .about__subtitle {
+    padding: 0.25rem 0.5rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .about__subtitle {
+    grid-area: subtitle;
+  }
+}
+@media (width <= 47.99875rem) {
+  .about__title {
+    grid-area: title;
+  }
+}
+.about__description {
+  grid-area: description;
+}
+.about__list {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  background-color: var(--color-dark);
+  border: var(--border);
+  border-radius: 0.75rem;
+}
+@media (width > 47.99875rem) {
+  .about__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (width <= 90.06125rem) {
+  .about__list {
+    gap: 0.625rem;
+    padding: 0.625rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

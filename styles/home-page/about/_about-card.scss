@@ -1,0 +1,40 @@
+@use "../../helpers" as *;
+
+.about-card {
+  --iconWidth: #{rem(52)};
+  --paddingRight: #{rem(20)};
+  --iconErrowWidth: #{rem(24)};
+
+  @include laptop {
+    --iconWidth: #{rem(40)};
+    --paddingRight: #{rem(16)};
+    --iconErrowWidth: #{rem(20)};
+  }
+
+  height: 100%;
+  display: grid;
+  align-items: center;
+  row-gap: fluid(20, 10);
+
+  &__title {
+    @include fluid-text(22, 16);
+
+    position: relative;
+    justify-content: space-between;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    padding-right: calc(var(--iconWidth) + var(--paddingRight));
+
+    &::after {
+      @include square(var(--iconWidth));
+
+      position: absolute;
+      top: 50%;
+      translate: 0 -50%;
+      left: calc(100% - var(--iconWidth));
+      content: '';
+      background: url("../images/about/Icon-arrow.svg") center/var(--iconErrowWidth) no-repeat var(--color-accent);
+      border-radius: 50%;
+    }
+  }
+}

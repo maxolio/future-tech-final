@@ -5,10 +5,8 @@
   --itemPaddingY: #{fluid(80, 40)};
 
   display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
 
-  @include tablet-above {
-    grid-template-columns: repeat(var(--columns), 1fr);
-  }
 
   &--2-cols {
     --columns: 2;
@@ -20,6 +18,10 @@
 
     @include laptop {
       --itemPaddingX: #{rem(40)};
+    }
+
+    @include tablet {
+      --columns: 1;
     }
 
     .bordered-grid__item {
