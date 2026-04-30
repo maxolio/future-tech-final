@@ -7,9 +7,46 @@
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
 
-
   &--2-cols {
     --columns: 2;
+    --itemPaddingX: #{rem(80)};
+
+    @include laptop {
+      --itemPaddingX: #{rem(50)};
+    }
+
+    @include mobile {
+      --columns: 1;
+    }
+
+    .bordered-grid__item {
+      padding-block: var(--itemPaddingY);
+
+      &:nth-child(odd) {
+        @include mobile-above {
+          padding-right: var(--itemPaddingX);
+          border-right: var(--border);
+        }
+      }
+
+      &:nth-child(even) {
+        @include mobile-above {
+          padding-left: var(--itemPaddingX);
+        }
+      }
+
+      &:nth-child(-n + 2) {
+       @include mobile-above {
+         border-bottom: var(--border);
+       }
+      }
+
+      &:not(:last-child) {
+        @include mobile {
+          border-bottom: var(--border);
+        }
+      }
+    }
   }
 
   &--3-cols {
